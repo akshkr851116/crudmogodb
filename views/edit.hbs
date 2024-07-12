@@ -1,0 +1,61 @@
+{{>header}}
+<title>CRUD APP | Home</title>
+{{>navbar}}
+
+<div class="container-fluid mid-section">
+    <h5 class="background text-center p-2 text-light mt-1">Update Employee Record</h5>
+    <form action="/edit/{{data._id}}" method="post">
+        <div class="mb-3">
+            <input type="text" name="name" class="form-control" placeholder="Enter Full Name*" value="{{data.name}}">
+            {{#if errorMessage.name}}
+            <p class="text-danger">{{errorMessage.name}}</p>
+            {{/if}}
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <input type="email" name="email" placeholder="Email Address*" class="form-control"
+                    value="{{data.email}}">
+                {{#if errorMessage.email}}
+                <p class="text-danger">{{errorMessage.email}}</p>
+                {{/if}}
+
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="text" name="phone" placeholder="Phone Number*" class="form-control" value="{{data.phone}}">
+                {{#if errorMessage.phone}}
+                <p class="text-danger">{{errorMessage.phone}}</p>
+                {{/if}}
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <input type="text" name="dsg" placeholder="Designation*" class="form-control" value="{{data.dsg}}">
+                {{#if errorMessage.dsg}}
+                <p class="text-danger">{{errorMessage.dsg}}</p>
+                {{/if}}
+
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="number" name="salary" placeholder="Salary*" class="form-control" value="{{data.salary}}">
+                {{#if errorMessage.salary}}
+                <p class="text-danger">{{errorMessage.salary}}</p>
+                {{/if}}
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <input type="text" name="city" placeholder="City Name" class="form-control" value="{{data.city}}">
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="text" name="state" placeholder="State Name" class="form-control" value="{{data.state}}">
+            </div>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary w-100 mybtn">Update</button>
+        </div>
+    </form>
+</div>
+
+{{>footer}}

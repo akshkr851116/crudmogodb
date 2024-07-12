@@ -1,0 +1,28 @@
+.background,.mybtn{
+    background-color: rgba(189, 37, 254, 0.945);
+}
+.mybtn:hover{
+    background-color: rgba(128, 16, 175, 0.945);
+}
+
+.mid-section {
+    height: 660px;
+    overflow: auto;
+}
+.mid-section::-webkit-scrollbar{
+    display: none;
+}
+
+.form-control{
+    border: 2px solid rgba(189, 37, 254, 0.945);
+}
+.form-control:focus{
+    outline: 2px solid rgba(215, 137, 249, 0.945);
+}
+
+@media only screen and (min-width:0) and (max-width:720px) {
+    .mid-section {
+        height: 620px;
+    }
+}
+
